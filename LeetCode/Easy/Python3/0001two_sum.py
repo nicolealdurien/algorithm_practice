@@ -1,0 +1,18 @@
+# LeetCode 0001: Two Sum
+# Difficulty: Easy
+# Given an array of integers (nums) and an integer (target), return indices of the two numbers such that they add up to (target).
+
+# You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+# You can return the answer in any order.
+
+# (first two lines provided by LC as setup to run their test cases)
+class Solution(object):
+    def twoSum(self, nums, target):
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                new_array=[]
+                if (nums[i]+nums[j]==target):
+                    new_array.append(i)
+                    new_array.append(j)
+                    return new_array
